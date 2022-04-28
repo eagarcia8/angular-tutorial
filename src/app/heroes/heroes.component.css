@@ -1,6 +1,7 @@
 /* HeroesComponent's private CSS styles */
 .heroes-component {
     background-color:lemonchiffon;
+    padding: 10px;
 }
 
 .heroes {
