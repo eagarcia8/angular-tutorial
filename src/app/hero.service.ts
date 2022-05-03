@@ -15,5 +15,12 @@ export class HeroService {
     return heroes;
   }
 
+  getHero(id: number): Observable<Hero> {
+    // curly braces and parenthesis affect the returned item from the arrow function.
+    const hero = HEROES.find(h => h.id === id)!;
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(hero);
+  }
+
   constructor(private messageService: MessageService) { }
 }
